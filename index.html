@@ -3,154 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romadz Store | Private Pterodactyl Panel</title>
+    <title>Romadz Store – Bot Hosting | Panel Pterodactyl Private Premium</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-
-    <div class="bg-blur blur-1"></div>
-    <div class="bg-blur blur-2"></div>
-
-    <nav>
-        <div class="container nav-content">
-            <div class="logo">Romadz<span>Store</span></div>
-            <div class="nav-links">
-                <a href="#list-panel">List Panel</a>
-                <a href="#contact" class="btn-sm">Hubungi Admin</a>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-container">
+            <div class="loader-logo">Romadz Store – Bot Hosting</div>
+            <div class="neon-spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
             </div>
+            <div class="loader-subtext">Loading Premium Experience...</div>
         </div>
-    </nav>
+    </div>
 
-    <header class="hero container section-reveal">
-        <div class="hero-text">
-            <span class="badge">Eksklusif & Stabil</span>
-            <h1>Romadz Store – <br><span>Bot Hosting</span></h1>
-            <p class="sub-hero">Private Pterodactyl Panel dengan Performa Stabil. Panel private untuk kebutuhan bot dan hosting dengan server stabil, garansi penuh, dan kontrol eksklusif.</p>
-            <div class="hero-btns">
-                <a href="#list-panel" class="btn btn-primary">Lihat List Panel</a>
-                <a href="#contact" class="btn btn-secondary">Hubungi Admin</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="blob-shape"></div>
-        </div>
-    </header>
-
-    <section id="list-panel" class="container">
-        <h2 class="section-title section-reveal">List Panel Pterodactyl – <span>Private</span></h2>
-        <div class="grid-pricing">
-            <div class="card pricing-card section-reveal" style="--delay: 0.1s; border-radius: 40px 15px 40px 15px;">
-                <h3>1GB RAM</h3>
-                <p class="cpu">110% CPU</p>
-                <div class="price">Rp4.000<span>/bln</span></div>
-                <ul class="features">
-                    <li>Private Panel</li>
-                    <li>Uptime 99.9%</li>
-                </ul>
-                <button class="btn-buy">Pilih Paket</button>
-            </div>
-            <div class="card pricing-card section-reveal" style="--delay: 0.2s; border-radius: 20px 40px 20px 40px;">
-                <div class="hot-badge">Populer</div>
-                <h3>2GB RAM</h3>
-                <p class="cpu">100% CPU</p>
-                <div class="price">Rp6.000<span>/bln</span></div>
-                <ul class="features">
-                    <li>Private Panel</li>
-                    <li>Uptime 99.9%</li>
-                </ul>
-                <button class="btn-buy">Pilih Paket</button>
-            </div>
-            <div class="card pricing-card section-reveal" style="--delay: 0.3s; border-radius: 35px 35px 15px 35px;">
-                <h3>3GB RAM</h3>
-                <p class="cpu">140% CPU</p>
-                <div class="price">Rp9.000<span>/bln</span></div>
-                <ul class="features">
-                    <li>Private Panel</li>
-                    <li>Uptime 99.9%</li>
-                </ul>
-                <button class="btn-buy">Pilih Paket</button>
-            </div>
-            <div class="card pricing-card section-reveal" style="--delay: 0.4s; border-radius: 15px 35px 35px 35px;">
-                <h3>4GB RAM</h3>
-                <p class="cpu">160% CPU</p>
-                <div class="price">Rp12.000<span>/bln</span></div>
-                <ul class="features">
-                    <li>Private Panel</li>
-                    <li>Uptime 99.9%</li>
-                </ul>
-                <button class="btn-buy">Pilih Paket</button>
-            </div>
-            <div class="card pricing-card section-reveal" style="--delay: 0.5s; border-radius: 40px 20px 40px 20px;">
-                <h3>5GB RAM</h3>
-                <p class="cpu">200% CPU</p>
-                <div class="price">Rp18.000<span>/bln</span></div>
-                <ul class="features">
-                    <li>Private Panel</li>
-                    <li>Uptime 99.9%</li>
-                </ul>
-                <button class="btn-buy">Pilih Paket</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="features-section container">
-        <h2 class="section-title section-reveal">Kenapa Panel Kami?</h2>
-        <div class="grid-features">
-            <div class="feature-item section-reveal" style="--delay: 0.1s">
-                <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Romadz Store</span> – Bot Hosting
+                    </h1>
+                    <h2 class="hero-subtitle">Premium Private Pterodactyl Panel Hosting</h2>
+                    <p class="hero-description">
+                        Layanan Panel Pterodactyl private dengan performa tinggi, server stabil, garansi penuh, dan kontrol eksklusif.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#list-panel" class="btn btn-primary">
+                            <span class="btn-text">Lihat List Panel</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span class="btn-text">Hubungi Admin</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                    </div>
                 </div>
-                <h4>High Spec VPS</h4>
-                <p>Intel Xeon Gold 6041 (4 Cores) untuk performa tanpa lag.</p>
-            </div>
-            <div class="feature-item section-reveal" style="--delay: 0.2s">
-                <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div class="hero-graphic">
+                    <div class="floating-server">
+                        <div class="server-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="server-glow"></div>
+                    </div>
                 </div>
-                <h4>Full Garansi</h4>
-                <p>Server aktif 30 hari dengan jaminan garansi penuh 30 hari.</p>
             </div>
-            <div class="feature-item section-reveal" style="--delay: 0.3s">
-                <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- List Panel Section -->
+        <section class="list-panel-section" id="list-panel">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-glow">List Panel Pterodactyl – Private</span>
+                    </h2>
+                    <p class="section-subtitle">Pilih paket sesuai kebutuhan dengan performa maksimal</p>
                 </div>
-                <h4>Eksklusif Admin</h4>
-                <p>Panel PRIVATE – Akses admin hanya milik Romadz Store.</p>
+                <div class="pricing-cards">
+                    <!-- Card 1 -->
+                    <div class="pricing-card fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">Starter</h3>
+                            <div class="card-ram">1GB RAM</div>
+                            <div class="card-cpu">110% CPU</div>
+                        </div>
+                        <div class="card-price">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-value">4.000</span>
+                            <span class="price-period">/bulan</span>
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> RAM 1 GB Dedicated</li>
+                            <li><i class="fas fa-check"></i> CPU 110% Power</li>
+                            <li><i class="fas fa-check"></i> Storage 10 GB SSD</li>
+                            <li><i class="fas fa-check"></i> Bandwidth 1 TB</li>
+                            <li><i class="fas fa-check"></i> Panel Private</li>
+                        </ul>
+                        <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20min,%20mau%20beli%20panel%20ram%201GB%20Ready?" class="btn btn-card" target="_blank">
+                            <span class="btn-text">Beli Sekarang</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="pricing-card fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">Basic</h3>
+                            <div class="card-ram">2GB RAM</div>
+                            <div class="card-cpu">100% CPU</div>
+                        </div>
+                        <div class="card-price">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-value">6.000</span>
+                            <span class="price-period">/bulan</span>
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> RAM 2 GB Dedicated</li>
+                            <li><i class="fas fa-check"></i> CPU 100% Power</li>
+                            <li><i class="fas fa-check"></i> Storage 20 GB SSD</li>
+                            <li><i class="fas fa-check"></i> Bandwidth 2 TB</li>
+                            <li><i class="fas fa-check"></i> Panel Private</li>
+                        </ul>
+                        <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20min,%20mau%20beli%20panel%20ram%202GB%20Ready?" class="btn btn-card" target="_blank">
+                            <span class="btn-text">Beli Sekarang</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="pricing-card fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">Standard</h3>
+                            <div class="card-ram">3GB RAM</div>
+                            <div class="card-cpu">140% CPU</div>
+                        </div>
+                        <div class="card-price">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-value">9.000</span>
+                            <span class="price-period">/bulan</span>
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> RAM 3 GB Dedicated</li>
+                            <li><i class="fas fa-check"></i> CPU 140% Power</li>
+                            <li><i class="fas fa-check"></i> Storage 30 GB SSD</li>
+                            <li><i class="fas fa-check"></i> Bandwidth 3 TB</li>
+                            <li><i class="fas fa-check"></i> Panel Private</li>
+                        </ul>
+                        <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20min,%20mau%20beli%20panel%20ram%203GB%20Ready?" class="btn btn-card" target="_blank">
+                            <span class="btn-text">Beli Sekarang</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="pricing-card fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">Advanced</h3>
+                            <div class="card-ram">4GB RAM</div>
+                            <div class="card-cpu">160% CPU</div>
+                        </div>
+                        <div class="card-price">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-value">12.000</span>
+                            <span class="price-period">/bulan</span>
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> RAM 4 GB Dedicated</li>
+                            <li><i class="fas fa-check"></i> CPU 160% Power</li>
+                            <li><i class="fas fa-check"></i> Storage 40 GB SSD</li>
+                            <li><i class="fas fa-check"></i> Bandwidth 4 TB</li>
+                            <li><i class="fas fa-check"></i> Panel Private</li>
+                        </ul>
+                        <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20min,%20mau%20beli%20panel%20ram%204GB%20Ready?" class="btn btn-card" target="_blank">
+                            <span class="btn-text">Beli Sekarang</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="pricing-card fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">Premium</h3>
+                            <div class="card-ram">5GB RAM</div>
+                            <div class="card-cpu">200% CPU</div>
+                        </div>
+                        <div class="card-price">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-value">18.000</span>
+                            <span class="price-period">/bulan</span>
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> RAM 5 GB Dedicated</li>
+                            <li><i class="fas fa-check"></i> CPU 200% Power</li>
+                            <li><i class="fas fa-check"></i> Storage 50 GB SSD</li>
+                            <li><i class="fas fa-check"></i> Bandwidth 5 TB</li>
+                            <li><i class="fas fa-check"></i> Panel Private</li>
+                        </ul>
+                        <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20min,%20mau%20beli%20panel%20ram%205GB%20Ready?" class="btn btn-card" target="_blank">
+                            <span class="btn-text">Beli Sekarang</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
             </div>
-            <div class="feature-item section-reveal resel-box" style="--delay: 0.4s">
-                <h4>Reseller Panel</h4>
-                <p>Ingin berjualan kembali? Hanya <strong>Rp20.000</strong> / bulan.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="container contact-section section-reveal">
-        <div class="contact-card">
-            <h2>Hubungi Kami</h2>
-            <p>Butuh bantuan atau ingin custom order? Chat kami sekarang.</p>
-            <div class="contact-btns">
-                <a href="#" class="btn-contact wa">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    WhatsApp
-                </a>
-                <a href="#" class="btn-contact tg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.441-.168.575-.521.767-.725.785-.443.039-.778-.293-1.207-.573-.672-.438-1.052-.71-1.704-1.138-.753-.495-.265-.767.164-1.213.112-.117 2.066-1.895 2.104-2.057.005-.02.01-.091-.03-.127s-.101-.024-.144-.015c-.061.013-.973.617-2.744 1.812-.26.177-.493.264-.702.259-.229-.005-.67-.13-1.002-.238-.407-.132-.731-.202-.703-.426.014-.117.177-.236.488-.358 1.914-.834 3.19-1.385 3.829-1.653 1.822-.765 2.2-.897 2.446-.902.055-.001.176.013.255.077.066.054.085.127.091.183.007.058.009.186.001.258z"/></svg>
-                    Telegram
-                </a>
+        <!-- Keunggulan Section -->
+        <section class="advantages-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-glow">Kenapa Memilih Kami?</span>
+                    </h2>
+                    <p class="section-subtitle">Layanan premium dengan keunggulan terbaik di kelasnya</p>
+                </div>
+                <div class="advantages-grid">
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="advantage-title">VPS Dedicated Intel Xeon Gold 6041</h3>
+                        <p class="advantage-description">Server dengan processor 4 Cores untuk performa maksimal tanpa gangguan.</p>
+                    </div>
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="advantage-title">Server aktif 30 hari & Garansi 30 Hari</h3>
+                        <p class="advantage-description">Uptime server terjamin dengan garansi penuh selama 30 hari setelah pembelian.</p>
+                    </div>
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="advantage-title">Panel PRIVATE – Admin hanya Romadz Store</h3>
+                        <p class="advantage-description">Panel eksklusif dengan akses private, hanya Anda dan admin yang bisa mengelola.</p>
+                    </div>
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="advantage-title">Stabil untuk Bot WhatsApp & Hosting Script</h3>
+                        <p class="advantage-description">Dukungan optimal untuk bot WhatsApp, hosting script, dan aplikasi lainnya.</p>
+                    </div>
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="advantage-title">Reseller Panel tersedia</h3>
+                        <p class="advantage-description">Kesempatan menjadi reseller dengan harga khusus Rp20.000 / bulan.</p>
+                    </div>
+                    <div class="advantage-card fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="advantage-title">Support 24/7</h3>
+                        <p class="advantage-description">Tim support siap membantu Anda kapan saja dengan respons cepat.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p><strong>Romadz Store</strong> – Bot Hosting</p>
-            <p class="copyright">© 2025 Romadz Store. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-glow">Contact & Order</span>
+                    </h2>
+                    <p class="section-subtitle">Hubungi kami untuk informasi lebih lanjut atau pemesanan</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/628XXXXXXXXXX" class="contact-btn whatsapp-btn" target="_blank">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="contact-title">WhatsApp Admin</h3>
+                            <p class="contact-subtitle">Fast Response</p>
+                        </div>
+                        <div class="contact-glow"></div>
+                    </a>
+                    <a href="https://t.me/romadzstore" class="contact-btn telegram-btn" target="_blank">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="contact-title">Telegram Admin</h3>
+                            <p class="contact-subtitle">Official Channel</p>
+                        </div>
+                        <div class="contact-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h2 class="footer-title">Romadz Store – Bot Hosting</h2>
+                        <p class="footer-tagline">Premium Pterodactyl Panel Provider</p>
+                    </div>
+                    <div class="footer-info">
+                        <p class="footer-copyright">© 2025 Romadz Store. All Rights Reserved.</p>
+                        <div class="footer-features">
+                            <span class="feature"><i class="fas fa-bolt"></i> Fast Response</span>
+                            <span class="feature"><i class="fas fa-shield-alt"></i> Secure System</span>
+                            <span class="feature"><i class="fas fa-crown"></i> Premium Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
-          </html>
+                                </html>
