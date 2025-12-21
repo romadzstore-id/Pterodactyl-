@@ -1,0 +1,137 @@
+/* ======================= style.css ======================= */
+:root {
+  --bg-dark: #0b0b12;
+  --neon-cyan: #00fff0;
+  --neon-purple: #8a2eff;
+  --neon-pink: #ff2ed1;
+  --text-light: #eaeaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h3 {
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  opacity: .8;
+}
+
+.hero-btn {
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  transition: all .3s ease;
+}
+
+.btn.neon {
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+  color: #000;
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.btn.outline {
+  border: 1px solid var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 50px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.price-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid transparent;
+  text-align: center;
+  transition: .3s;
+}
+
+.price-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 25px var(--neon-cyan);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.price-card h4 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.price-card span {
+  display: block;
+  font-size: 1.4rem;
+  margin: 15px 0;
+}
+
+.features ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+}
+
+.features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  opacity: .7;
+}
