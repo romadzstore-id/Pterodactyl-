@@ -1,70 +1,200 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Page Loader
+window.addEventListener('load', function() {
+    const pageLoader = document.getElementById('pageLoader');
     
-    // Intersection Observer for Reveal Animation
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // Add loaded class to trigger fade out
+    setTimeout(() => {
+        pageLoader.classList.add('loaded');
+        
+        // Remove loader from DOM after animation completes
+        setTimeout(() => {
+            pageLoader.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                
-                // If it's an icon box inside the revealed section, add extra animation
-                const icon = entry.target.querySelector('.icon-box svg');
-                if(icon) {
-                    icon.style.transform = 'scale(1.1)';
-                    setTimeout(() => icon.style.transform = 'scale(1)', 500);
-                }
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.section-reveal').forEach(el => {
-        revealObserver.observe(el);
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
+});
 
-    // Smooth Scroll for Navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Button Click Interaction (Press Effect is handled via CSS :active)
-    // Adding extra ripple logic or micro-interactions
-    const buttons = document.querySelectorAll('.btn, .btn-buy, .btn-contact');
+// Scroll Animation
+function checkScroll() {
+    const fadeElements = document.querySelectorAll('.fade-in');
     
-    buttons.forEach(btn => {
-        btn.addEventListener('mousedown', () => {
-            btn.style.transform = 'scale(0.96)';
-        });
-        btn.addEventListener('mouseup', () => {
-            btn.style.transform = '';
-        });
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = '';
-        });
-    });
-
-    // Subtle parallax effect for background blurs
-    window.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
+    fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
         
-        const blur1 = document.querySelector('.blur-1');
-        const blur2 = document.querySelector('.blur-2');
-        
-        blur1.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
-        blur2.style.transform = `translate(-${x * 20}px, -${y * 20}px)`;
+        // If element is in viewport
+        if (elementTop < windowHeight - 100 && elementBottom > 0) {
+            element.classList.add('visible');
+        }
     });
+}
 
+// Initial check on page load
+document.addEventListener('DOMContentLoaded', checkScroll);
+
+// Check on scroll
+window.addEventListener('scroll', checkScroll);
+
+// Neon Button Hover Effect Enhancement
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mouseenter', function() {
+        const glow = this.querySelector('.btn-glow');
+        if (glow) {
+            glow.style.transition = 'left 0.7s ease';
+        }
+    });
+    
+    button.addEventListener('mouseleave', function() {
+        const glow = this.querySelector('.btn-glow');
+        if (glow) {
+            glow.style.transition = 'left 0.3s ease';
+        }
+    });
+});
+
+// Contact Button Hover Effect Enhancement
+document.querySelectorAll('.contact-btn').forEach(button => {
+    button.addEventListener('mouseenter', function() {
+        const glow = this.querySelector('.contact-glow');
+        if (glow) {
+            glow.style.transition = 'left 0.7s ease';
+        }
+    });
+    
+    button.addEventListener('mouseleave', function() {
+        const glow = this.querySelector('.contact-glow');
+        if (glow) {
+            glow.style.transition = 'left 0.3s ease';
+        }
+    });
+});
+
+// Card Hover Effect with Delay for Glow
+document.querySelectorAll('.pricing-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        const glow = this.querySelector('.card-glow');
+        if (glow) {
+            glow.style.transition = 'opacity 0.4s ease 0.1s';
+        }
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        const glow = this.querySelector('.card-glow');
+        if (glow) {
+            glow.style.transition = 'opacity 0.4s ease';
+        }
+    });
+});
+
+// Dynamic Text Effect for Hero Title
+const heroTitle = document.querySelector('.hero-title');
+if (heroTitle) {
+    const titleText = heroTitle.textContent;
+    heroTitle.innerHTML = '';
+    
+    // Split text into characters and wrap each in span for potential animation
+    const chars = titleText.split('');
+    chars.forEach(char => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.display = 'inline-block';
+        heroTitle.appendChild(span);
+    });
+}
+
+// RGB Background Animation
+function createFloatingRGBElements() {
+    const section = document.querySelector('.hero-section');
+    if (!section) return;
+    
+    // Create floating RGB elements
+    for (let i = 0; i < 8; i++) {
+        const rgbElement = document.createElement('div');
+        rgbElement.className = 'floating-rgb';
+        
+        // Random position
+        const left = Math.random() * 100;
+        const top = Math.random() * 100;
+        const size = Math.random() * 40 + 10;
+        const colorIndex = Math.floor(Math.random() * 3);
+        const colors = ['var(--neon-cyan)', 'var(--neon-purple)', 'var(--neon-pink)'];
+        const color = colors[colorIndex];
+        
+        // Set styles
+        rgbElement.style.position = 'absolute';
+        rgbElement.style.left = `${left}%`;
+        rgbElement.style.top = `${top}%`;
+        rgbElement.style.width = `${size}px`;
+        rgbElement.style.height = `${size}px`;
+        rgbElement.style.borderRadius = '50%';
+        rgbElement.style.background = color;
+        rgbElement.style.opacity = '0.05';
+        rgbElement.style.filter = 'blur(10px)';
+        rgbElement.style.zIndex = '0';
+        rgbElement.style.animation = `floatRGB ${Math.random() * 20 + 10}s infinite ease-in-out`;
+        rgbElement.style.animationDelay = `${Math.random() * 5}s`;
+        
+        section.appendChild(rgbElement);
+    }
+}
+
+// Add CSS for floating RGB animation
+const style = document.createElement('style');
+style.textContent = `
+@keyframes floatRGB {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, -20px) rotate(90deg); }
+    50% { transform: translate(0, -40px) rotate(180deg); }
+    75% { transform: translate(-20px, -20px) rotate(270deg); }
+}
+`;
+document.head.appendChild(style);
+
+// Initialize floating RGB elements after page load
+window.addEventListener('load', createFloatingRGBElements);
+
+// Update WhatsApp links with correct phone number
+// Replace 628XXXXXXXXXX with actual phone number
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    // You can replace this with your actual WhatsApp number
+    // For now, it keeps the placeholder
+    console.log('Update WhatsApp links with actual phone number in the HTML');
+});
+
+// Performance optimization: Throttle scroll event
+let scrollTimeout;
+window.addEventListener('scroll', function() {
+    if (!scrollTimeout) {
+        scrollTimeout = setTimeout(function() {
+            checkScroll();
+            scrollTimeout = null;
+        }, 100);
+    }
+});
+
+// Initialize all animations when page is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Trigger initial scroll check after a small delay
+    setTimeout(checkScroll, 300);
+    
+    // Add loaded class to body for potential additional styling
+    document.body.classList.add('page-loaded');
 });
