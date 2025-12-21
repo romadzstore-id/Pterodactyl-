@@ -6,367 +6,216 @@
     <title>Romadz Store - Panel Private Berkualitas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="logo">
-                    <i class="fas fa-rocket"></i>
-                    <span>Romadz Store</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="#hero" class="nav-link active">Beranda</a>
-                <a href="#keunggulan" class="nav-link">Keunggulan</a>
-                <a href="#pricelist" class="nav-link">Pricelist</a>
-                <a href="#testimoni" class="nav-link">Testimoni</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">Premium Panel Service</div>
-            <h1 class="hero-title">Romadz Store</h1>
-            <p class="hero-description">Solusi Panel Private Berkualitas Tinggi untuk Bot WhatsApp, Hosting Script, dan Project Pribadi.</p>
-            <div class="hero-buttons">
-                <a href="#pricelist" class="btn btn-primary">Lihat Pricelist</a>
-                <a href="#contact" class="btn btn-secondary">Konsultasi Gratis</a>
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">Romadz Store</h1>
+                <p class="hero-description">
+                    Solusi Panel Private Berkualitas Tinggi untuk Bot WhatsApp, Hosting Script, dan Project Pribadi.
+                </p>
+                <button class="cta-button" onclick="scrollToPricelist()">
+                    Lihat Pricelist
+                </button>
             </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll untuk menjelajahi</span>
-        </div>
-        
-        <!-- Floating Elements -->
-        <div class="floating-elements">
-            <div class="floating-element el-1"><i class="fas fa-server"></i></div>
-            <div class="floating-element el-2"><i class="fas fa-bolt"></i></div>
-            <div class="floating-element el-3"><i class="fas fa-shield-alt"></i></div>
-            <div class="floating-element el-4"><i class="fas fa-rocket"></i></div>
-            <div class="floating-element el-5"><i class="fas fa-chart-line"></i></div>
         </div>
     </section>
 
-    <!-- Keunggulan Panel Section -->
-    <section id="keunggulan" class="keunggulan">
+    <!-- Keunggulan Section -->
+    <section class="features" id="features">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Keunggulan Panel</h2>
-                <p class="section-subtitle">Mengapa memilih panel dari Romadz Store? Berikut keunggulan yang kami tawarkan.</p>
-            </div>
-            
-            <div class="keunggulan-grid">
-                <div class="keunggulan-card" data-delay="0">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>VPS Dedicated Intel Xeon Gold</h3>
-                    <p>Menggunakan VPS Dedicated Intel Xeon Gold 6140 (2 Cores) untuk performa maksimal dan konsisten.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Processor kelas enterprise</p>
-                        <p><i class="fas fa-check-circle"></i> Dedicated resource</p>
-                    </div>
+            <h2 class="section-title">Keunggulan Panel Kami</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>VPS Dedicated</h3>
+                    <p>Intel Xeon Gold 6140 (2 Cores) untuk performa maksimal</p>
                 </div>
-                
-                <div class="keunggulan-card" data-delay="0.1">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Aktif 30 Hari & Garansi</h3>
-                    <p>Server aktif 30 hari penuh dengan garansi 30 Hari untuk kenyamanan dan keamanan Anda.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Uptime 99.9%</p>
-                        <p><i class="fas fa-check-circle"></i> Support 24/7</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Server Stabil 30 Hari</h3>
+                    <p>Aktif penuh dengan garansi 30 hari tanpa downtime</p>
                 </div>
-                
-                <div class="keunggulan-card" data-delay="0.2">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
                     <h3>Panel Private</h3>
-                    <p>Panel bersifat PRIVATE – Admin panel hanya dikelola oleh Romadz Store, tidak dibagikan ke pihak lain.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Akses eksklusif</p>
-                        <p><i class="fas fa-check-circle"></i> Keamanan terjamin</p>
-                    </div>
+                    <p>Admin panel eksklusif dikelola Romadz Store</p>
                 </div>
-                
-                <div class="keunggulan-card" data-delay="0.3">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
                     <h3>Performa Stabil</h3>
-                    <p>Performa stabil untuk Bot WhatsApp, Hosting Script, dan Project Pribadi dengan jaringan cepat.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Optimized for WhatsApp</p>
-                        <p><i class="fas fa-check-circle"></i> Low latency network</p>
-                    </div>
+                    <p>Ideal untuk Bot WA, Hosting Script & Project Pribadi</p>
                 </div>
-                
-                <div class="keunggulan-card" data-delay="0.4">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
                     <h3>Reseller Panel</h3>
-                    <p>Reseller Panel tersedia dengan harga terjangkau – Rp20.000 / bulan dengan keuntungan menarik.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Discount khusus reseller</p>
-                        <p><i class="fas fa-check-circle"></i> Dashboard management</p>
-                    </div>
-                </div>
-                
-                <div class="keunggulan-card" data-delay="0.5">
-                    <div class="keunggulan-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support Responsif</h3>
-                    <p>Tim support siap membantu 24/7 melalui WhatsApp dengan respon cepat dan solusi tepat.</p>
-                    <div class="keunggulan-hover">
-                        <p><i class="fas fa-check-circle"></i> Support via WhatsApp</p>
-                        <p><i class="fas fa-check-circle"></i> Tutorial lengkap</p>
-                    </div>
+                    <p>Tersedia dengan harga Rp20.000 / bulan</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricelist Section -->
-    <section id="pricelist" class="pricelist">
+    <section class="pricelist" id="pricelist">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pricelist Panel</h2>
-                <p class="section-subtitle">Pilih paket panel yang sesuai dengan kebutuhan Anda. Harga terjangkau dengan kualitas terbaik.</p>
-            </div>
-            
+            <h2 class="section-title">Pricelist Panel</h2>
             <div class="pricelist-grid">
                 <!-- Paket 1 -->
-                <div class="pricelist-card" data-delay="0">
-                    <div class="paket-badge">Paket 1</div>
-                    <div class="paket-popular">Paling Ekonomis</div>
-                    <h3 class="paket-name">Basic</h3>
-                    <div class="paket-icon"><i class="fas fa-seedling"></i></div>
-                    
-                    <ul class="specs">
-                        <li><span class="label">RAM</span><span class="value">1GB</span></li>
-                        <li><span class="label">Disk</span><span class="value">1GB SSD</span></li>
-                        <li><span class="label">CPU Core</span><span class="value">1 Core</span></li>
-                        <li><span class="label">CPU Usage</span><span class="value">50%</span></li>
-                        <li><span class="label">Backup</span><span class="value">Daily</span></li>
-                    </ul>
-                    
-                    <div class="harga">
-                        <span class="harga-amount">Rp3.000</span>
-                        <span class="harga-period">/bulan</span>
+                <div class="price-card" data-ram="1GB" data-price="3.000">
+                    <div class="card-header">
+                        <h3>Paket 1</h3>
                     </div>
-                    
-                    <div class="paket-harga-info">Hemat 40% dari harga normal</div>
-                    
-                    <a href="https://wa.me/6283171889474?text=Saya%20mau%20beli%20panel%20Paket%20Basic%20(1GB%20RAM)%20Harga%20Rp3000,%20Ready?" class="btn-beli" target="_blank">
-                        <span>Beli Sekarang</span>
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="card-body">
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">1GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disk</span>
+                            <span class="spec-value">1GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">50%</span>
+                        </div>
+                        <div class="price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">3.000</span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="buyPanel('1GB', '3.000')">
+                        Beli Sekarang
+                    </button>
                 </div>
-                
+
                 <!-- Paket 2 -->
-                <div class="pricelist-card" data-delay="0.1">
-                    <div class="paket-badge">Paket 2</div>
-                    <div class="paket-popular">Terpopuler</div>
-                    <h3 class="paket-name">Starter</h3>
-                    <div class="paket-icon"><i class="fas fa-leaf"></i></div>
-                    
-                    <ul class="specs">
-                        <li><span class="label">RAM</span><span class="value">2GB</span></li>
-                        <li><span class="label">Disk</span><span class="value">2GB SSD</span></li>
-                        <li><span class="label">CPU Core</span><span class="value">1 Core</span></li>
-                        <li><span class="label">CPU Usage</span><span class="value">80%</span></li>
-                        <li><span class="label">Backup</span><span class="value">Daily</span></li>
-                    </ul>
-                    
-                    <div class="harga">
-                        <span class="harga-amount">Rp6.000</span>
-                        <span class="harga-period">/bulan</span>
+                <div class="price-card" data-ram="2GB" data-price="6.000">
+                    <div class="card-header">
+                        <h3>Paket 2</h3>
                     </div>
-                    
-                    <div class="paket-harga-info">Hemat 35% dari harga normal</div>
-                    
-                    <a href="https://wa.me/6283171889474?text=Saya%20mau%20beli%20panel%20Paket%20Starter%20(2GB%20RAM)%20Harga%20Rp6000,%20Ready?" class="btn-beli" target="_blank">
-                        <span>Beli Sekarang</span>
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="card-body">
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">2GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disk</span>
+                            <span class="spec-value">2GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">80%</span>
+                        </div>
+                        <div class="price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">6.000</span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="buyPanel('2GB', '6.000')">
+                        Beli Sekarang
+                    </button>
                 </div>
-                
+
                 <!-- Paket 3 -->
-                <div class="pricelist-card featured" data-delay="0.2">
-                    <div class="paket-badge">Paket 3</div>
-                    <div class="paket-popular">Rekomendasi</div>
-                    <h3 class="paket-name">Standard</h3>
-                    <div class="paket-icon"><i class="fas fa-star"></i></div>
-                    
-                    <ul class="specs">
-                        <li><span class="label">RAM</span><span class="value">3GB</span></li>
-                        <li><span class="label">Disk</span><span class="value">3GB SSD</span></li>
-                        <li><span class="label">CPU Core</span><span class="value">2 Cores</span></li>
-                        <li><span class="label">CPU Usage</span><span class="value">100%</span></li>
-                        <li><span class="label">Backup</span><span class="value">Daily + Weekly</span></li>
-                    </ul>
-                    
-                    <div class="harga">
-                        <span class="harga-amount">Rp12.000</span>
-                        <span class="harga-period">/bulan</span>
+                <div class="price-card popular" data-ram="3GB" data-price="12.000">
+                    <div class="popular-badge">Popular</div>
+                    <div class="card-header">
+                        <h3>Paket 3</h3>
                     </div>
-                    
-                    <div class="paket-harga-info">Hemat 40% dari harga normal</div>
-                    
-                    <a href="https://wa.me/6283171889474?text=Saya%20mau%20beli%20panel%20Paket%20Standard%20(3GB%20RAM)%20Harga%20Rp12000,%20Ready?" class="btn-beli featured-btn" target="_blank">
-                        <span>Beli Sekarang</span>
-                        <i class="fas fa-bolt"></i>
-                    </a>
+                    <div class="card-body">
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">3GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disk</span>
+                            <span class="spec-value">3GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">100%</span>
+                        </div>
+                        <div class="price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">12.000</span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="buyPanel('3GB', '12.000')">
+                        Beli Sekarang
+                    </button>
                 </div>
-                
+
                 <!-- Paket 4 -->
-                <div class="pricelist-card" data-delay="0.3">
-                    <div class="paket-badge">Paket 4</div>
-                    <div class="paket-popular">High Performance</div>
-                    <h3 class="paket-name">Advanced</h3>
-                    <div class="paket-icon"><i class="fas fa-gem"></i></div>
-                    
-                    <ul class="specs">
-                        <li><span class="label">RAM</span><span class="value">4GB</span></li>
-                        <li><span class="label">Disk</span><span class="value">4GB SSD</span></li>
-                        <li><span class="label">CPU Core</span><span class="value">2 Cores</span></li>
-                        <li><span class="label">CPU Usage</span><span class="value">120%</span></li>
-                        <li><span class="label">Backup</span><span class="value">Daily + Weekly</span></li>
-                    </ul>
-                    
-                    <div class="harga">
-                        <span class="harga-amount">Rp15.000</span>
-                        <span class="harga-period">/bulan</span>
+                <div class="price-card" data-ram="4GB" data-price="15.000">
+                    <div class="card-header">
+                        <h3>Paket 4</h3>
                     </div>
-                    
-                    <div class="paket-harga-info">Hemat 45% dari harga normal</div>
-                    
-                    <a href="https://wa.me/6283171889474?text=Saya%20mau%20beli%20panel%20Paket%20Advanced%20(4GB%20RAM)%20Harga%20Rp15000,%20Ready?" class="btn-beli" target="_blank">
-                        <span>Beli Sekarang</span>
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="card-body">
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">4GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disk</span>
+                            <span class="spec-value">4GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">120%</span>
+                        </div>
+                        <div class="price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">15.000</span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="buyPanel('4GB', '15.000')">
+                        Beli Sekarang
+                    </button>
                 </div>
-                
+
                 <!-- Paket 5 -->
-                <div class="pricelist-card" data-delay="0.4">
-                    <div class="paket-badge">Paket 5</div>
-                    <div class="paket-popular">Ultimate</div>
-                    <h3 class="paket-name">Pro</h3>
-                    <div class="paket-icon"><i class="fas fa-crown"></i></div>
-                    
-                    <ul class="specs">
-                        <li><span class="label">RAM</span><span class="value">5GB</span></li>
-                        <li><span class="label">Disk</span><span class="value">5GB SSD</span></li>
-                        <li><span class="label">CPU Core</span><span class="value">3 Cores</span></li>
-                        <li><span class="label">CPU Usage</span><span class="value">150%</span></li>
-                        <li><span class="label">Backup</span><span class="value">Daily + Weekly + Monthly</span></li>
-                    </ul>
-                    
-                    <div class="harga">
-                        <span class="harga-amount">Rp18.000</span>
-                        <span class="harga-period">/bulan</span>
+                <div class="price-card" data-ram="5GB" data-price="18.000">
+                    <div class="card-header">
+                        <h3>Paket 5</h3>
                     </div>
-                    
-                    <div class="paket-harga-info">Hemat 50% dari harga normal</div>
-                    
-                    <a href="https://wa.me/6283171889474?text=Saya%20mau%20beli%20panel%20Paket%20Pro%20(5GB%20RAM)%20Harga%20Rp18000,%20Ready?" class="btn-beli" target="_blank">
-                        <span>Beli Sekarang</span>
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="card-body">
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">5GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disk</span>
+                            <span class="spec-value">5GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">150%</span>
+                        </div>
+                        <div class="price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">18.000</span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="buyPanel('5GB', '18.000')">
+                        Beli Sekarang
+                    </button>
                 </div>
-            </div>
-            
-            <div class="pricelist-note">
-                <p><i class="fas fa-info-circle"></i> <strong>Semua paket sudah termasuk:</strong> Installasi panel, setup awal, backup reguler, dan support 24/7.</p>
-                <p><i class="fas fa-percentage"></i> <strong>Diskon khusus:</strong> Dapatkan diskon tambahan 10% untuk pembayaran 3 bulan sekaligus!</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimoni Section -->
-    <section id="testimoni" class="testimoni">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Testimoni Pelanggan</h2>
-                <p class="section-subtitle">Apa kata mereka yang sudah menggunakan panel dari Romadz Store.</p>
-            </div>
-            
-            <div class="testimoni-slider">
-                <div class="testimoni-track">
-                    <div class="testimoni-card">
-                        <div class="testimoni-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimoni-text">"Panelnya sangat stabil untuk bot WhatsApp saya, sudah 6 bulan tidak ada masalah. Support juga responsif banget!"</p>
-                        <div class="testimoni-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Andi Pratama</h4>
-                                <p>Pengguna sejak 2024</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimoni-card">
-                        <div class="testimoni-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p class="testimoni-text">"Sebagai reseller, saya sangat terbantu dengan panel dari Romadz Store. Harga kompetitif dan performa selalu optimal."</p>
-                        <div class="testimoni-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Sari Dewi</h4>
-                                <p>Reseller Panel</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimoni-card">
-                        <div class="testimoni-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimoni-text">"Hosting script PHP di panel ini sangat lancar. Tidak pernah down dan kecepatannya konsisten. Recommended banget!"</p>
-                        <div class="testimoni-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Rizki Ananda</h4
+            <p>&copy; 2025 Romadz Store</p>
+            <p>All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                    </html>
