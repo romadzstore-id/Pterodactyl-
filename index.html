@@ -1,139 +1,102 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMADZ STORE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="photo/logo.jpg" type="image/jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday My Love 💖</title>
+  <!-- Fonts Elegan & Romantis -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Controls -->
-        <div class="header-controls">
-            <div class="theme-switch-wrapper">
-                <div class="theme-switch">
-                    <input type="checkbox" id="theme-checkbox" class="theme-checkbox">
-                    <label for="theme-checkbox" class="theme-label">
-                        <div class="theme-toggle">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                            <span class="theme-ball"></span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="language-switch">
-                <button class="lang-btn active" data-lang="id">ID</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-        </div>
+  <!-- 🎵 MUSIK OTOMATIS -->
+  <audio id="bgMusic" loop autoplay>
+    <source src="music.mp3" type="audio/mp3">
+    Browser tidak mendukung audio.
+  </audio>
 
-        <!-- Profile Section -->
-        <header class="profile-section">
-            <div class="avatar-container">
-                <div class="avatar-frame">
-                    <img src="photo/logo.jpg" alt="Romadz Store Logo" class="avatar" id="avatar">
-                    <div class="avatar-glow"></div>
-                </div>
-                <div class="status-indicator"></div>
-            </div>
-            <div class="profile-info">
-                <h1 class="store-title" id="store-title">ROMADZ STORE</h1>
-                <p class="store-subtitle" id="store-subtitle">Marketplace Premium & Reseller Terpercaya</p>
-                <div class="store-badge">
-                    <i class="fas fa-star"></i>
-                    <span id="store-tagline">Premium Quality Store</span>
-                </div>
-            </div>
-        </header>
+  <!-- TOMBOL PLAY/PAUSE MUSIK -->
+  <div class="music-control" id="musicToggle">
+    <i id="musicIcon" class="fas fa-pause-circle"></i>
+  </div>
 
-        <!-- Contact Buttons -->
-        <section class="contact-section">
-            <h2 class="section-title" id="contact-title">Kontak Langsung</h2>
-            <div class="buttons-grid">
-                <a href="https://wa.me/6283171889474" class="action-btn whatsapp-btn" target="_blank" id="whatsapp-btn">
-                    <div class="btn-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title" id="whatsapp-title">WhatsApp</span>
-                        <span class="btn-subtitle" id="whatsapp-subtitle">Chat Langsung</span>
-                    </div>
-                    <div class="btn-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                
-                <a href="https://t.me/rmddz" class="action-btn telegram-btn" target="_blank" id="telegram-btn">
-                    <div class="btn-icon">
-                        <i class="fab fa-telegram"></i>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title" id="telegram-title">Telegram</span>
-                        <span class="btn-subtitle" id="telegram-subtitle">DM untuk Order</span>
-                    </div>
-                    <div class="btn-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-            </div>
-        </section>
+  <!-- PARTIKEL HATI (canvas) -->
+  <canvas id="heartsCanvas"></canvas>
 
-        <!-- Marketplace Groups -->
-        <section class="groups-section">
-            <div class="section-header">
-                <h2 class="section-title" id="marketplace-title">Group Marketplace</h2>
-                <p class="section-subtitle" id="marketplace-subtitle">Bebas Promosi & Jualan</p>
-            </div>
-            <div class="cards-container">
-                <!-- Marketplace cards will be generated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Exclusive Stock Group -->
-        <section class="exclusive-section">
-            <div class="section-header">
-                <h2 class="section-title" id="exclusive-title">Group Eksklusif</h2>
-                <div class="premium-badge">
-                    <i class="fas fa-crown"></i>
-                    <span id="exclusive-badge">Premium</span>
-                </div>
-            </div>
-            <div class="cards-container">
-                <!-- Exclusive card will be generated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Channel Section -->
-        <section class="channel-section">
-            <div class="section-header">
-                <h2 class="section-title" id="channel-title">Channel Resmi</h2>
-                <p class="section-subtitle" id="channel-subtitle">Testimoni & Update</p>
-            </div>
-            <div class="cards-container">
-                <!-- Channel card will be generated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <p class="footer-text" id="footer-text">© 2025 Romadz Store. Seluruh hak dilindungi.</p>
-                <p class="footer-tagline" id="footer-tagline">Premium Marketplace Solution</p>
-            </div>
-        </footer>
+  <!-- ✨ OPENING SCREEN -->
+  <div id="openingScreen" class="opening-screen">
+    <div class="opening-content glass-card">
+      <h1 class="glow-text">A Special Day For Someone Special 💖</h1>
+      <p class="opening-sub">Dipersembahkan dengan sepenuh cinta</p>
+      <button id="openSurpriseBtn" class="btn-open">Buka Kejutan</button>
     </div>
+  </div>
 
-    <!-- Ripple Effect Element -->
-    <div class="ripple-container" id="ripple-container"></div>
+  <!-- 💌 ISI UTAMA WEBSITE (awalnya tersembunyi) -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <!-- 💌 Halaman Ucapan -->
+    <section class="section message-section">
+      <div class="container glass-card">
+        <span class="subhead">Untukmu, satu-satunya</span>
+        <h2 class="birthday-title">Happy Birthday My Love</h2>
+        <div class="typewriter-container">
+          <p id="typewriterText" class="message-text"></p>
+        </div>
+        <div class="floating-heart">💗</div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="config.js"></script>
-    <script src="script.js"></script>
+    <!-- 📸 Galeri Foto Aesthetic -->
+    <section class="section gallery-section">
+      <div class="container">
+        <h3 class="section-title">✨ Galeri Kenangan Manis</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>🥰</span></div></div>
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>💞</span></div></div>
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>🌸</span></div></div>
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>🎂</span></div></div>
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>💫</span></div></div>
+          <div class="gallery-item glass-card"><div class="img-placeholder"><span>🕯️</span></div></div>
+        </div>
+        <p class="photo-caption">Setiap detik bersamamu adalah hadiah terindah.</p>
+      </div>
+    </section>
+
+    <!-- 🎁 Section Kenangan / Pesan Cinta -->
+    <section class="section love-note-section">
+      <div class="container glass-card love-card">
+        <i class="fas fa-envelope-open-text envelope-icon"></i>
+        <h3>📬 Pesan untukmu</h3>
+        <div class="love-message">
+          <p>"Aku masih ingat pertama kali bertemu, dunia seperti berhenti. Setiap hari bersamamu adalah alasan aku tersenyum. Terima kasih sudah lahir ke dunia, bintang paling terang dalam hidupku."</p>
+        </div>
+        <div class="signature">- Dari seseorang yang selalu mencintaimu</div>
+        <div class="floating-rose">🌹</div>
+      </div>
+    </section>
+
+    <!-- 🕯️ Ending Section: Make a Wish -->
+    <section class="section wish-section">
+      <div class="container glass-card wish-card">
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wax"></div>
+        </div>
+        <h2 class="wish-title glow-text">Make a Wish</h2>
+        <p class="wish-sub">Tiup lilinnya, sayang... <br> Semoga semua impianmu menjadi nyata. 🎂✨</p>
+        <div class="romantic-closing">
+          <span>Dengan cinta,</span>
+          <span>selamanya milikmu.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
 </body>
 </html>
